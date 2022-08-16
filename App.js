@@ -2,11 +2,14 @@ const todoArray = [];
 let id = 0;
 
 const inputBoard = document.querySelector('.input-todo');
+const initContent = (obj, prop) => {
+  obj[prop] = '';
+};
 
 // todo 렌더
 const renderTodo = () => {
   const todoList = document.querySelector('.todos');
-  todoList.innerHTML = '';
+  initContent(todoList, 'innerHTML');
 
   todoArray.forEach(todo => {
     const list = document.createElement('li');
@@ -31,8 +34,9 @@ const addTodo = (text, todoId) => {
 const init = () => {
   inputBoard.addEventListener('keyup', e => {
     if (e.code === 'Enter') {
-      addTodo(e.target.value, id++);
-      e.target.value = '';
+      const { target } = e;
+      addTodo(target.value, id++);
+      initContent(target, 'value');
     }
   });
 };
