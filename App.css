@@ -1,0 +1,45 @@
+body {
+  width: 80vw;
+  height: 80vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+header {
+  width: 40vw;
+  height: 14vh;
+  border: 1px solid black;
+  display: inherit;
+  flex-direction: column;
+  margin: inherit;
+  margin-top: 2em;
+}
+
+h1 {
+  text-align: center;
+  border: 1px solid black;
+}
+
+section {
+  border: 1px solid black;
+  margin: inherit;
+  text-align: center;
+}
+
+.list-todo {
+  width: 40vw;
+  height: 40vh;
+  border: 1px solid black;
+}
+
+.input-area {
+  width: 40vw;
+  height: 20vh;
+  border: 1px solid black;
+}
+
+div {
+  border: 1px solid black;
+}
