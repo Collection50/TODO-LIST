@@ -34,6 +34,10 @@ section {
   border: 1px solid black;
 }
 
+.list-todo li {
+  cursor: pointer;
+}
+
 .input-area {
   width: 40vw;
   height: 20vh;
@@ -42,4 +46,8 @@ section {
 
 div {
   border: 1px solid black;
+}
+
+.checked {
+  text-decoration: line-through;
 }
