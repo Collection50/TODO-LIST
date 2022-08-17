@@ -1,7 +1,7 @@
 const todoArray = [];
 let id = 0;
 
-const inputBoard = document.querySelector('.input-todo');
+const inputBoard = document.querySelector('.input__todo');
 const initContent = (obj, prop) => {
   obj[prop] = '';
 };
@@ -36,12 +36,12 @@ const updateCompleted = (completed, todoElem) => {
 
 // todo 렌더
 const renderTodo = () => {
-  const todoList = document.querySelector('.list-todo');
+  const todoList = document.querySelector('.list__todo');
   initContent(todoList, 'innerHTML');
 
   todoArray.forEach(todo => {
     const list = document.createElement('div');
-    list.classList.add('todo-item');
+    list.classList.add('todo__item');
 
     const todoElem = document.createElement('div');
     todoElem.classList.add('todo');

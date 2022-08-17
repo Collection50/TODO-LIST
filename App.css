@@ -30,13 +30,13 @@ div {
 }
 
 /* Boards */
-.list-todo {
+.list__todo {
   border: 1px solid black;
   width: 40vw;
   height: 40vh;
 }
 
-.todo-item {
+.todo__item {
   border: inherit;
   display: flex;
   justify-content: center;
