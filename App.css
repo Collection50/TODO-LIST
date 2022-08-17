@@ -25,8 +25,25 @@ h1 {
 
 div {
   border: 1px solid black;
-  margin: inherit;
+  margin: 0 auto;
   text-align: center;
+}
+
+.text__date {
+  display: flex;
+  text-align: center;
+  height: 4vh;
+}
+
+.text__year-month-day {
+  font-size: 1.7rem;
+  line-height: 4vh;
+  margin-right: 10vw;
+}
+
+.text__day-of-week {
+  font-size: 1.2rem;
+  line-height: 4.5vh;
 }
 
 /* Boards */
@@ -55,6 +72,8 @@ div {
   height: 1.5em;
   cursor: pointer;
   border: 1px solid black;
+  border-radius: 1em;
+  background-color: rgb(230, 135, 135);
 }
 
 .checked {

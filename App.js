@@ -66,6 +66,8 @@ const addTodo = (text, todoId) => {
 };
 
 // 초기화면 설정
+
+// basic structure
 const init = () => {
   inputBoard.addEventListener('keyup', e => {
     const { target } = e;
@@ -76,3 +78,28 @@ const init = () => {
   });
 };
 init();
+
+// 날짜
+const initDate = () => {
+  const dateObj = document.querySelector('.text__date');
+
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  const WEEKDAY = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
+  const dayOfWeekDay = WEEKDAY[date.getDay()];
+
+  const yearMonthDay = document.createElement('div');
+  yearMonthDay.classList.add('text__year-month-day');
+  yearMonthDay.innerText = `${year}년 ${month}월 ${day}일`;
+
+  const dayOfWeek = document.createElement('div');
+  dayOfWeek.classList.add('text__day-of-week');
+  dayOfWeek.innerText = `${dayOfWeekDay}`;
+
+  dateObj.appendChild(yearMonthDay);
+  dateObj.appendChild(dayOfWeek);
+};
+initDate();
