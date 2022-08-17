@@ -9,6 +9,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-param-reassign": "off"
   }
 }
