@@ -22,7 +22,7 @@ h1 {
   border: 1px solid black;
 }
 
-section {
+div {
   border: 1px solid black;
   margin: inherit;
   text-align: center;
@@ -36,6 +36,25 @@ section {
 
 .list-todo li {
   cursor: pointer;
+  list-style: none;
+  font-size: 1.5em;
+  width: inherit;
+  height: 4vh;
+  display: flex;
+  line-height: 4vh;
+}
+
+.button-delete {
+  width: 1.5em;
+  height: 1.5em;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0vh;
+  padding-top: 1vh;
+  width: 30vw;
+  margin: inherit;
 }
 
 .input-area {
@@ -44,8 +63,9 @@ section {
   border: 1px solid black;
 }
 
-div {
+.todo {
   border: 1px solid black;
+  width: inherit;
 }
 
 .checked {
