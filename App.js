@@ -9,10 +9,19 @@ const initContent = (obj, prop) => {
 // 매개변수 id와 동일한 id를 갖고 있는 객체를 찾은 후
 // completed 값을 반전한다
 // 이후 바뀐 todoArray를 다시 렌더
-const checkTodo = id => {
+const checkTodo = todoId => {
   todoArray.forEach(todo => {
-    if (todo.id === id) {
+    if (todo.id === todoId) {
       todo.isCompleted = !todo.isCompleted;
+    }
+  });
+  renderTodo();
+};
+
+const deleteTodo = todoId => {
+  todoArray.forEach((todo, index) => {
+    if (todo.id === todoId) {
+      todoArray.splice(index, 1);
     }
   });
   renderTodo();
@@ -27,11 +36,11 @@ const updateCompleted = (completed, todoElem) => {
 
 // todo 렌더
 const renderTodo = () => {
-  const todoList = document.querySelector('.todos');
+  const todoList = document.querySelector('.list-todo');
   initContent(todoList, 'innerHTML');
 
   todoArray.forEach(todo => {
-    const list = document.createElement('li');
+    const list = document.createElement('div');
     list.classList.add('todo-item');
 
     const todoElem = document.createElement('div');
@@ -40,7 +49,12 @@ const renderTodo = () => {
     todoElem.addEventListener('click', () => checkTodo(todo.id));
     updateCompleted(todo.isCompleted, todoElem);
 
+    const deleteButton = document.createElement('div');
+    deleteButton.classList.add('button-delete');
+    deleteButton.addEventListener('click', () => deleteTodo(todo.id));
+
     list.appendChild(todoElem);
+    list.appendChild(deleteButton);
     todoList.appendChild(list);
   });
 };
