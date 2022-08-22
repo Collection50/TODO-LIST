@@ -50,7 +50,6 @@ h1 {
 
 div {
   margin: 0 auto;
-  text-align: center;
 }
 
 .text__date {
@@ -96,24 +95,27 @@ div {
   /* border: 1px solid black; */
   display: flex;
   justify-content: center;
+
+  width: auto;
+  height: auto;
   /* margin-bottom: 0.5vh; */
   margin-bottom: 5px;
 }
 
+.todo__item:hover .button-delete {
+  visibility: visible;
+}
+
 .todo {
   /* border: 1px solid black; */
-  border-radius: 20px;
   cursor: pointer;
+
   /* width: 30vw; */
   width: 250px;
-  height: auto;
+
   /* line-height: 3vh; */
   line-height: 30px;
   font-size: 1.2em;
-}
-
-.todo:hover {
-  box-shadow: 0 0 30px rgb(211, 211, 211);
 }
 
 .button-delete {
@@ -123,11 +125,18 @@ div {
   width: 20px;
   height: 20px;
   cursor: pointer;
+
   /* border-radius: 1em; */
   border-radius: 10px;
+  background-color: rgb(210, 210, 210);
+
+  visibility: hidden;
+
+  margin: auto;
+}
+
+.button-delete:hover {
   background-color: rgb(230, 135, 135);
-  /* margin: 0.5vh; */
-  margin-top: 4px;
 }
 
 .checked {
@@ -143,6 +152,7 @@ div {
   height: 140px;
   border-top: 1px solid rgb(187, 186, 186);
   /* padding: 2vw; */
+  text-align: center;
 
   padding-top: 20px;
 }
