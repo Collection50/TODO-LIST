@@ -8,30 +8,44 @@
   margin: 0 auto;
 } */
 
+body {
+  background-color: #f8f6ea;
+  font-family: 'Jua', sans-serif;
+}
+
 .root {
-  border: 1px solid black;
-  border-radius: 2vw;
-  width: 40vw;
-  height: 80vh;
+  /* border: 1px solid black; */
+
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgb(165, 165, 165);
+
+  width: 400px;
+  /* width: 40vh; */
+  height: 800px;
+  /* height: 80vh; */
+
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
+
+  /* margin-top: 10vh; */
+  margin-top: 100px;
   background-color: white;
 }
 
 .header {
   /* border: 1px solid black; */
-  width: 40vw;
-  height: 14vh;
+  /* width: 40vw;
+  height: 14vh; */
+  width: 400px;
+  height: 140px;
   display: inherit;
   flex-direction: column;
-  border-bottom: 1px solid gray;
 }
 
 h1 {
   text-align: center;
   /* border: 1px solid gray; */
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
 }
 
 div {
@@ -43,54 +57,77 @@ div {
   /* border: inherit; */
   display: flex;
   text-align: center;
-  height: 4vh;
+  /* height: 4vh; */
+  height: 40px;
+  border-bottom: 1px solid rgb(187, 186, 186);
+  border-top: 1px solid rgb(187, 186, 186);
+  margin: 0;
 }
 
 .text__year-month-day {
-  border: inherit;
+  /* border: inherit; */
   font-size: 1.7rem;
-  line-height: 4vh;
-  margin-right: 10vw;
+  /* line-height: 4vh; */
+  line-height: 40px;
+  /* margin-right: 10vw; */
+  margin-right: 100px;
 }
 
 .text__day-of-week {
   /* border: inherit; */
   font-size: 1.2rem;
-  line-height: 4.5vh;
+  /* line-height: 4.5vh; */
+  line-height: 45px;
 }
 
 /* Boards */
 .list__todo {
   /* border: 1px solid black; */
-  width: 36vw;
-  height: 60vh;
+  /* width: 36vw;
+  height: 60vh; */
+  width: 300px;
+  height: 600px;
   overflow: auto;
-  padding: 2vw;
+  /* padding: 2vw; */
+  padding: 50px;
 }
 
 .todo__item {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
-  margin-bottom: 0.5vh;
+  /* margin-bottom: 0.5vh; */
+  margin-bottom: 5px;
 }
 
 .todo {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-radius: 20px;
   cursor: pointer;
-  width: 30vw;
+  /* width: 30vw; */
+  width: 250px;
   height: auto;
-  line-height: 3vh;
+  /* line-height: 3vh; */
+  line-height: 30px;
   font-size: 1.2em;
 }
 
+.todo:hover {
+  box-shadow: 0 0 30px rgb(211, 211, 211);
+}
+
 .button-delete {
-  width: 1.5em;
-  height: 1.5em;
+  /* border: 1px solid black; */
+  /* width: 2vh;
+  height: 2vh; */
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  border: 1px solid black;
-  border-radius: 1em;
+  /* border-radius: 1em; */
+  border-radius: 10px;
   background-color: rgb(230, 135, 135);
+  /* margin: 0.5vh; */
+  margin-top: 4px;
 }
 
 .checked {
@@ -100,14 +137,24 @@ div {
 
 /* INPUT */
 .input-area {
-  width: 36vw;
-  height: 14vh;
-  border-top: 1px solid gray;
-  padding: 2vw;
+  /* width: 36vw;
+  height: 14vh; */
+  width: 400px;
+  height: 140px;
+  border-top: 1px solid rgb(187, 186, 186);
+  /* padding: 2vw; */
+
+  padding-top: 20px;
 }
 
 .input__todo {
-  width: 30vw;
-  height: 3vh;
+  /* width: 30vw;
+  height: 3vh; */
+  width: 300px;
+  height: 30px;
   font-size: 1.2rem;
+}
+
+.input__todo::placeholder {
+  font-family: 'Jua', sans-serif;
 }
