@@ -16,6 +16,7 @@ const checkTodo = todoId => {
     }
   });
   renderTodo();
+  setRestTodo();
 };
 
 const deleteTodo = todoId => {
@@ -24,7 +25,7 @@ const deleteTodo = todoId => {
       todoArray.splice(index, 1);
     }
   });
-  renderTodo();
+  setRestTodo();
 };
 
 // completed 값에 따른 css 클래스 추가 삭제
@@ -47,6 +48,7 @@ const renderTodo = () => {
     todoElem.classList.add('todo');
     todoElem.innerText = todo.content;
     todoElem.addEventListener('click', () => checkTodo(todo.id));
+
     updateCompleted(todo.isCompleted, todoElem);
 
     const deleteButton = document.createElement('div');
@@ -63,6 +65,7 @@ const renderTodo = () => {
 const addTodo = (text, todoId) => {
   todoArray.push({ id: todoId, content: text, isCompleted: false });
   renderTodo();
+  setRestTodo();
 };
 
 // 초기화면 설정
@@ -103,3 +106,13 @@ const initDate = () => {
   dateObj.appendChild(dayOfWeek);
 };
 initDate();
+
+// 남은 할 일 표시
+const setRestTodo = () => {
+  const rest = document.querySelector('.text__rest-todo');
+  const countRest = todoArray.filter(todo => !todo.isCompleted).length;
+
+  rest.innerText = `할 일 ${countRest}개 남음`;
+  renderTodo();
+};
+setRestTodo();

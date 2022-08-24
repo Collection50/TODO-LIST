@@ -1,6 +1,8 @@
 body {
   background-color: #f8f6ea;
   font-family: 'Jua', sans-serif;
+
+  margin-top: 8.5vh;
 }
 
 div {
@@ -13,10 +15,10 @@ div {
 
   width: 400px;
   height: 800px;
-  margin-top: 100px;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   background-color: white;
 }
@@ -29,7 +31,13 @@ div {
   flex-direction: column;
 }
 
-.text-__title {
+.text__rest-todo {
+  margin-left: 20px;
+  /* color: #df7861; */
+  color: #66ace2;
+}
+
+.text__title {
   text-align: center;
 }
 
