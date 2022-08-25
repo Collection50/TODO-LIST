@@ -137,3 +137,18 @@ div {
 .input__todo::placeholder {
   font-family: 'Jua', sans-serif;
 }
+
+/* FOOTER */
+
+.footer {
+  margin-top: 4vh;
+}
+
+.link__github {
+  border: 3px solid #66ace2;
+  border-radius: 10px;
+
+  width: 60px;
+  height: auto;
+  text-align: center;
+}
