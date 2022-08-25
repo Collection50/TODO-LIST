@@ -152,3 +152,8 @@ div {
   height: auto;
   text-align: center;
 }
+
+.link__github > a {
+  text-decoration: none;
+  color: black;
+}
