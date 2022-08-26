@@ -1,7 +1,6 @@
-const todoArray = [];
+let todoArray = [];
 let id = 0;
 
-const inputBoard = document.querySelector('.input__todo');
 const initContent = (obj, prop) => {
   obj[prop] = '';
 };
@@ -20,11 +19,8 @@ const checkTodo = todoId => {
 };
 
 const deleteTodo = todoId => {
-  todoArray.forEach((todo, index) => {
-    if (todo.id === todoId) {
-      todoArray.splice(index, 1);
-    }
-  });
+  todoArray = todoArray.filter(todo => todo.id !== todoId);
+
   setRestTodo();
 };
 
@@ -71,20 +67,23 @@ const addTodo = (text, todoId) => {
 // 초기화면 설정
 
 // basic structure
-const init = () => {
-  inputBoard.addEventListener('keyup', e => {
+const initView = () => {
+  const inputBox = document.querySelector('.input__todo');
+
+  inputBox.addEventListener('keyup', e => {
     const { target } = e;
-    if (e.code === 'Enter' && target.value !== '') {
+
+    if (e.code === 'Enter' && target.value) {
       addTodo(target.value, id++);
       initContent(target, 'value');
     }
   });
 };
-init();
+initView();
 
 // 날짜
 const initDate = () => {
-  const dateObj = document.querySelector('.text__date');
+  const dateElem = document.querySelector('.text__date');
 
   const date = new Date();
   const year = date.getFullYear();
@@ -102,8 +101,8 @@ const initDate = () => {
   dayOfWeek.classList.add('text__day-of-week');
   dayOfWeek.innerText = `${dayOfWeekDay}`;
 
-  dateObj.appendChild(yearMonthDay);
-  dateObj.appendChild(dayOfWeek);
+  dateElem.appendChild(yearMonthDay);
+  dateElem.appendChild(dayOfWeek);
 };
 initDate();
 
